@@ -1,10 +1,9 @@
 package com.apress.springrecipes.sequence;
 
+import com.apress.springrecipes.sequence.config.SequenceGeneratorConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import com.apress.springrecipes.sequence.config.SequenceGeneratorConfiguration;
 
 @Slf4j
 public class Main {

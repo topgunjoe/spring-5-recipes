@@ -9,10 +9,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 @NoArgsConstructor
 public class SequenceGenerator {
 
+    private final AtomicInteger counter = new AtomicInteger();
     private String prefix;
     private String suffix;
     private int initial;
-    private final AtomicInteger counter = new AtomicInteger();
 
     public String getSequence() {
         StringBuilder builder = new StringBuilder();
