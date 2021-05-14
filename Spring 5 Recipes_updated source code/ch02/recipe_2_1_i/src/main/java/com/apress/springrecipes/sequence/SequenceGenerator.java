@@ -1,7 +1,12 @@
 package com.apress.springrecipes.sequence;
 
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Setter
+@NoArgsConstructor
 public class SequenceGenerator {
 
     private String prefix;
@@ -9,26 +14,12 @@ public class SequenceGenerator {
     private int initial;
     private final AtomicInteger counter = new AtomicInteger();
 
-    public SequenceGenerator() {
-    }
-
-    public void setPrefix(String prefix) {
-        this.prefix = prefix;
-    }
-
-    public void setSuffix(String suffix) {
-        this.suffix = suffix;
-    }
-
-    public void setInitial(int initial) {
-        this.initial = initial;
-    }
-
     public String getSequence() {
-        String builder = prefix +
-                initial +
-                counter.getAndIncrement() +
-                suffix;
-        return builder;
+        StringBuilder builder = new StringBuilder();
+        return builder.append(prefix)
+                .append(initial)
+                .append(counter.getAndIncrement())
+                .append(suffix)
+                .toString();
     }
 }

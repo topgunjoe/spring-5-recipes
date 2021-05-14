@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath 'io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
+        classpath 'io.freefair.gradle:lombok-plugin:2.9.5'
     }
 }
 
@@ -35,6 +36,7 @@ subprojects { subproject ->
     apply plugin: 'java'
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'com.github.ben-manes.versions'
+    apply plugin: 'io.freefair.lombok'
 
     ext['spring.version'] = '5.0.4.RELEASE'
 
